@@ -107,12 +107,19 @@ svg {
 
 .fs-big-heading {
     font-size: var(--fs-big-heading);
+    line-height: 1.15;
 }
 .fs-medium-heading {
     font-size: var(--fs-medium-heading);
+    line-height: 1.25;
 }
 .fs-small-heading {
     font-size: var(--fs-medium-heading);
+    line-height: 1.5;
+}
+.fs-secondary-body {
+    font-size: var(--fs-secondary-body);
+    line-height: 1.75;
 }
 
 .fz-14 {
@@ -138,13 +145,116 @@ svg {
 }
 
 
-.container {
-    max-width: 1320px;
-    margin: 50px auto 130px;
-}
-
 /* General styling */
 body {
     font-family: var(--ff-body);
     font-size: var(--ff-body);
+}
+
+.container {
+    --max-width: 1320px;
+    --padding: 1.25rem;
+
+    width: min(var(--max-width), 100% - var(--padding)*2);
+    margin-inline: auto;
+}
+/* Hero section */ 
+
+.even-columns {
+    display: grid;
+    gap: 1rem;
+    background-color: var(--clr-primary-400);
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 1.75rem 2.375rem 0 ;
+    text-align: center;
+}
+.hero-text {
+    margin-bottom: 1.25rem;
+}
+
+.hero-text h1 {
+    font-size: var(--fz-22);
+    margin-bottom: 0.5rem;
+}
+.hero-text p {
+    font-size: var(--fz-14);
+    margin-bottom: 1rem;
+}
+.hero-img img {
+    width: 233px;
+    height: 245px;
+    margin-inline: auto;
+}
+
+
+/* smaller devices */
+@media screen and (max-width: 36em) {
+
+}
+
+/* medium devices */
+@media screen and (min-width: 36em) and (max-width: 52em) {
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        border-radius: 30px;
+    }
+
+    .even-columns .hero-img img {
+        width: 581px;
+        height: 613px;
+    }
+}
+
+
+/* Button , [ Play-icon as a span ]*/
+.primary-button {
+    text-decoration: none;
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-secondary-100);
+    padding: 0.5em 0.75em;
+    border-radius: 5px;
+}
+span {
+    margin-left: 10px;
+}
+
+/* side bar cards */
+.sidebar-cards {
+    margin-inline: 5rem;
+}
+.sidebar-cards a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.cards1 {
+ margin: 1.5rem auto;
+ white-space: nowrap;
+ width: 190px;
+}
+.cards2 {
+    width: 160px;
+}
+.cards1, .cards2 {
+    padding: 0.5625rem 1.5rem;
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
+}
+.cards1, .cards2, .cards3 a {
+     margin-inline: auto; 
+}
+/* active button */
+.cards3 {
+    margin: 1rem auto;
+    width: 160px;
+    background-color: var(--clr-secondary-100);
+    padding: 0.5625rem 1.5rem;
+    border-radius: 10px;
+}
+.cards3 a{
+    color: var(--clr-neutral-900);
 }
