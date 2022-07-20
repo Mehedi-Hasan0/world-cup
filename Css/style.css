@@ -63,11 +63,6 @@ body {
     height: 100%;
 }
 
-/* Set core body defaults */
-body {
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
 
 /* Make images easier to work with */
 img,
@@ -77,21 +72,6 @@ svg {
   display: block;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-   scroll-behavior: auto;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
 
 /* Utility Classes */
 
@@ -146,4 +126,25 @@ svg {
 }
 .fz-20 {
     font-size: var(--fz-20);
+}
+.fz-22 {
+    font-size: var(--fz-22);
+}
+.fz-40 {
+    font-size: var(--fz-40);
+}
+.fz-70 {
+    font-size: var(--fz-70);
+}
+
+
+.container {
+    max-width: 1320px;
+    margin: 50px auto 130px;
+}
+
+/* General styling */
+body {
+    font-family: var(--ff-body);
+    font-size: var(--ff-body);
 }
