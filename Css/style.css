@@ -192,11 +192,11 @@ body {
     }
     .hero-text h1 {
         font-size: var(--fz-40);
-        margin-bottom: 0.625rem;
+        margin-bottom: 1.25rem;
     }
     .hero-text p {
-        font-size: var(--fz-14);
-        margin-bottom: 1.25rem;
+        font-size: var(--fz-16);
+        margin-bottom: 1.875rem;
     }
 /* Button , [   Play-icon as a span   ]*/
     .primary-button {
@@ -217,10 +217,21 @@ body {
     /* blog section styles */
 
     /* side bar cards */
+    .cardsAndBlogs {
+        display: flex;
+        margin-top: 4.375rem;
+    }
     .sidebar-cards {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        margin: 4.375rem 0 3rem 0;
+        justify-content: space-between;
+        margin: 0 1.75rem 3rem 0;
+        padding: 1.5rem;
+        background-color: var(--clr-primary-400);
+        width: 312px;
+        height: 312px;
+        border-radius: 10px;
     }
     .cards1 {
     white-space: nowrap;
@@ -229,17 +240,17 @@ body {
         margin-left: 22px;
     }
     .cards1, .cards2 {
-        border: 1px solid #E8E8E8;
+    background-color: var(--clr-neutral-900);
         text-align: center;
     }
     .cards3 {
         text-align: center;
-        margin-left: 22px;
     }
     .cards1, .cards2, .cards3 {
         padding: 1rem 1.75rem;
         width: 230px;
         border-radius: 10px;
+        margin: 0 auto;
     }
     .sidebar-cards a {
         font-size: var(--fs-primary-button);
@@ -249,7 +260,6 @@ body {
     }
 /* active button */
     .cards3 {
-        margin: 0 0 0 22px ;
         background-color: var(--clr-secondary-100);
     }
     .cards3 a{
@@ -259,7 +269,7 @@ body {
  /* Blog post  */
     .three-columns-two-columns {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.25rem;
     }
     
@@ -325,8 +335,12 @@ body {
 
         }
         .veiw-button {
+            display: none;
             margin: 3.125rem auto;
             width: 131px;
+        }
+        .blog-post-last {
+            display: block;
         }
 /* ------------
 footer section styles
@@ -349,7 +363,7 @@ footer section styles
     }
     /* footer link */
     .footer-link {
-        width: 650px;
+        width: 898px;
         margin: 0 auto 1.875rem;
     }
     .footer-link a {
@@ -507,7 +521,9 @@ span {
         color: var(--clr-primary-400);
         opacity: 70%;
     }
-
+    .veiw-button {
+        display: none;
+    }
 /* ------------
  footer section styles
  ------------*/
